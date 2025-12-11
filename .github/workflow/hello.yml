@@ -1,0 +1,15 @@
+name: Hello World Workflow
+
+# 実行するきっかけ（イベント）：コードがプッシュされたとき
+on: [push]
+
+jobs:
+  # ジョブの名前
+  say-hello:
+    # 実行する環境（GitHubが用意する仮想マシン）
+    runs-on: ubuntu-latest
+
+    steps:
+      # ステップ1：コマンドを実行する
+      - name: Print Hello
+        run: echo "Hello, GitHub Actions!"
