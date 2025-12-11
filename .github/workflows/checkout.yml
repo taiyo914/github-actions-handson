@@ -1,0 +1,16 @@
+name: Checkout Workflow
+
+on: [push]
+
+jobs:
+  checkout-repo:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. GitHub公式のCheckoutアクションを使う
+      # これでリポジトリの全ファイルが仮想マシンにコピーされます
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. ファイル一覧を表示して確認する
+      - name: List Files
+        run: ls -la
