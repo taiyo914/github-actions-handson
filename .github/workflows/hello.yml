@@ -13,3 +13,7 @@ jobs:
       # ステップ1：コマンドを実行する
       - name: Print Hello
         run: echo "Hello, GitHub Actions!"
+
+      # 2つ目のステップ（今回追加）
+      - name: Show Date
+        run: date
